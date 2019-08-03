@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Wallet Hub Assignment">
+	
+	<test name="Wallet Hub tests">
+		 <classes>
+		 <class name="testcases.FacebookTest" />	
+		  <class name="testcases.WalletHubTest" />	
+		</classes>
+	</test>
+</suite>
