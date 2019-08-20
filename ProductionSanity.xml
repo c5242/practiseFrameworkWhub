@@ -2,9 +2,10 @@
 <suite name="Wallet Hub Assignment">
 	
 	<test name="Wallet Hub tests">
+	<parameter name="user" value="mashwini010@gmail.com"/>
+	<parameter name="pass" value="Job@1234"/>
 		 <classes>
-		 <class name="testcases.FacebookTest" />	
-		  <class name="testcases.WalletHubTest" />	
+		  <class name="testcases.WalletHubTest2" />		
 		</classes>
 	</test>
 </suite>
