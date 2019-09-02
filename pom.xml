@@ -13,7 +13,29 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+  <build>
+    <plugins>
+<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.14.1</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>	
+    </plugins>
+    </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -33,9 +55,9 @@
     <scope>test</scope>
 </dependency>
 <dependency>
-    <groupId>com.relevantcodes</groupId>
+    <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>2.41.1</version>
+    <version>3.1.5</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
@@ -44,4 +66,5 @@
     <version>3.17</version>
 </dependency>
   </dependencies>
+  
 </project>

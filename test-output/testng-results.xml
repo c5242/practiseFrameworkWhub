@@ -1,125 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="110372" started-at="2019-07-31T14:32:13Z" finished-at="2019-07-31T14:34:04Z">
+  <suite name="Default suite" duration-ms="2060" started-at="2019-09-02T19:23:18Z" finished-at="2019-09-02T19:23:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="110372" started-at="2019-07-31T14:32:13Z" finished-at="2019-07-31T14:34:04Z">
-      <class name="testcases.WalletHubTest">
-        <test-method status="PASS" signature="configuration()[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="configuration" is-config="true" duration-ms="14123" started-at="2019-07-31T20:02:13Z" finished-at="2019-07-31T20:02:27Z">
+    <test name="Default test" duration-ms="2060" started-at="2019-09-02T19:23:18Z" finished-at="2019-09-02T19:23:20Z">
+      <class name="testcases.amazon.AmzaonFiltersUsingDataDriven">
+        <test-method status="PASS" signature="Bclass()[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bclass" is-config="true" duration-ms="732" started-at="2019-09-03T00:53:18Z" finished-at="2019-09-03T00:53:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configuration -->
-        <test-method status="PASS" signature="testbefore(java.lang.reflect.Method)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="testbefore" is-config="true" duration-ms="3" started-at="2019-07-31T20:02:27Z" finished-at="2019-07-31T20:02:27Z">
+        </test-method> <!-- Bclass -->
+        <test-method status="PASS" signature="Bmethod(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bmethod" is-config="true" duration-ms="36" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.WalletHubTest.login() throws java.io.FileNotFoundException]]>
+                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test(java.lang.reflect.Method) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testbefore -->
-        <test-method status="PASS" signature="login()[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="login" duration-ms="54063" started-at="2019-07-31T20:02:27Z" finished-at="2019-07-31T20:03:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="ScreenShot(org.testng.ITestResult)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="ScreenShot" is-config="true" duration-ms="0" started-at="2019-07-31T20:03:21Z" finished-at="2019-07-31T20:03:21Z">
+        </test-method> <!-- Bmethod -->
+        <test-method status="PASS" signature="test(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="test" duration-ms="60" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=WalletHubTest.login()[pri:0, instance:testcases.WalletHubTest@4501b7af] output={null}]]]>
+                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test(java.lang.reflect.Method) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ScreenShot -->
-        <test-method status="PASS" signature="testbefore(java.lang.reflect.Method)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="testbefore" is-config="true" duration-ms="1" started-at="2019-07-31T20:03:21Z" finished-at="2019-07-31T20:03:21Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="Bmethod(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bmethod" is-config="true" duration-ms="2" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.WalletHubTest.hoverOverStars_Verify() throws java.io.FileNotFoundException]]>
+                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test1() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testbefore -->
-        <test-method status="PASS" signature="hoverOverStars_Verify()[pri:1, instance:testcases.WalletHubTest@4501b7af]" name="hoverOverStars_Verify" duration-ms="1998" started-at="2019-07-31T20:03:21Z" finished-at="2019-07-31T20:03:23Z">
+        </test-method> <!-- Bmethod -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="test1" duration-ms="13" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hoverOverStars_Verify -->
-        <test-method status="PASS" signature="ScreenShot(org.testng.ITestResult)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="ScreenShot" is-config="true" duration-ms="0" started-at="2019-07-31T20:03:23Z" finished-at="2019-07-31T20:03:23Z">
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="Bmethod(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bmethod" is-config="true" duration-ms="1" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=hoverOverStars_Verify status=SUCCESS method=WalletHubTest.hoverOverStars_Verify()[pri:1, instance:testcases.WalletHubTest@4501b7af] output={null}]]]>
+                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test2() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ScreenShot -->
-        <test-method status="PASS" signature="testbefore(java.lang.reflect.Method)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="testbefore" is-config="true" duration-ms="1" started-at="2019-07-31T20:03:23Z" finished-at="2019-07-31T20:03:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testcases.WalletHubTest.writeReviewAndSubmit() throws java.io.FileNotFoundException]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- Bmethod -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="test2" duration-ms="1106" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testbefore -->
-        <test-method status="PASS" signature="writeReviewAndSubmit()[pri:2, instance:testcases.WalletHubTest@4501b7af]" name="writeReviewAndSubmit" duration-ms="14933" started-at="2019-07-31T20:03:23Z" finished-at="2019-07-31T20:03:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- writeReviewAndSubmit -->
-        <test-method status="PASS" signature="ScreenShot(org.testng.ITestResult)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="ScreenShot" is-config="true" duration-ms="0" started-at="2019-07-31T20:03:38Z" finished-at="2019-07-31T20:03:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=writeReviewAndSubmit status=SUCCESS method=WalletHubTest.writeReviewAndSubmit()[pri:2, instance:testcases.WalletHubTest@4501b7af] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ScreenShot -->
-        <test-method status="PASS" signature="testbefore(java.lang.reflect.Method)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="testbefore" is-config="true" duration-ms="0" started-at="2019-07-31T20:03:38Z" finished-at="2019-07-31T20:03:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testcases.WalletHubTest.gotoProfileAndVerifyReview() throws java.io.FileNotFoundException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testbefore -->
-        <test-method status="PASS" signature="gotoProfileAndVerifyReview()[pri:3, instance:testcases.WalletHubTest@4501b7af]" name="gotoProfileAndVerifyReview" duration-ms="14018" started-at="2019-07-31T20:03:38Z" finished-at="2019-07-31T20:03:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gotoProfileAndVerifyReview -->
-        <test-method status="PASS" signature="ScreenShot(org.testng.ITestResult)[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="ScreenShot" is-config="true" duration-ms="1" started-at="2019-07-31T20:03:52Z" finished-at="2019-07-31T20:03:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=gotoProfileAndVerifyReview status=SUCCESS method=WalletHubTest.gotoProfileAndVerifyReview()[pri:3, instance:testcases.WalletHubTest@4501b7af] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ScreenShot -->
-        <test-method status="PASS" signature="driverClean()[pri:0, instance:testcases.WalletHubTest@4501b7af]" name="driverClean" is-config="true" duration-ms="11135" started-at="2019-07-31T20:03:52Z" finished-at="2019-07-31T20:04:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverClean -->
-      </class> <!-- testcases.WalletHubTest -->
+        </test-method> <!-- test2 -->
+      </class> <!-- testcases.amazon.AmzaonFiltersUsingDataDriven -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -2,6 +2,7 @@ package testcases;
 
 import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
@@ -12,20 +13,28 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pageobject.FaceBookHomePage;
-import pageobject.LoginPage;
+import facebookPagePbjects.FaceBookHomePage;
 import util.WTestBase;
+import walletHubPageObjects.LoginPage;
 
 public class FacebookTest extends WTestBase {
 	
+	/**
+	Author@AshwiniMore
+	 * @throws FileNotFoundException
+	 */
+	FacebookTest() throws FileNotFoundException
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	String TestCaseName;
 	LoginPage login;
 	
 	@BeforeClass
 	public void configuration() throws FileNotFoundException
 	{
-		init();
-		initDriver();
+		getDriver();
 		driverSpecificOperations();
 	}
 	@BeforeMethod
@@ -53,10 +62,8 @@ public class FacebookTest extends WTestBase {
 		@Test
 		public void login() throws FileNotFoundException
 		{
-			init();
-			initDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			readProperties();
+			getDriver();
 			login=PageFactory.initElements(driver, LoginPage.class);
 			login.doLogin(prop.getProperty("fusername"),prop.getProperty("fpassword"));
 			

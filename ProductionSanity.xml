@@ -5,7 +5,7 @@
 	<parameter name="user" value="mashwini010@gmail.com"/>
 	<parameter name="pass" value="Job@1234"/>
 		 <classes>
-		  <class name="testcases.WalletHubTest2" />		
+		  <class name="testcases.ParameterizedTest_WalletHubLogin" />		
 		</classes>
 	</test>
 </suite>
