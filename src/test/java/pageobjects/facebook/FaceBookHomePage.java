@@ -1,4 +1,4 @@
-package facebookPagePbjects;
+package pageobjects.facebook;
 
 public class FaceBookHomePage {
 
