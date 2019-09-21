@@ -13,9 +13,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import facebookPagePbjects.FaceBookHomePage;
+import pageobjects.facebook.FaceBookHomePage;
+import pageobjects.wallethub.LoginPage;
 import util.WTestBase;
-import walletHubPageObjects.LoginPage;
 
 public class FacebookTest extends WTestBase {
 	
