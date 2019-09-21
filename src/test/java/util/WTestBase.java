@@ -21,8 +21,8 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.w3c.dom.html.HTMLAppletElement;
 
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 
 public class WTestBase implements WebDriverEventListener
 {
@@ -45,7 +45,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 
 			prop = new Properties();
-			FileInputStream fileIn = new FileInputStream(System.getProperty("user.dir") + Constants.CONFIGPROPERTIES);
+			FileInputStream fileIn = new FileInputStream(Constants.CONFIGPROPERTIES);
 			try
 			{
 				prop.load(fileIn);
@@ -66,7 +66,7 @@ public class WTestBase implements WebDriverEventListener
 	// initiliaze driver according to driver type
 	public void getDriver() throws FileNotFoundException
 		{
-			Properties prop = new Properties();
+
 			if(prop.getProperty("browser").equalsIgnoreCase("Chrome"))
 			{
 				System.setProperty("webdriver.chrome.driver",
@@ -100,12 +100,11 @@ public class WTestBase implements WebDriverEventListener
 
 	String dateFormatter()
 		{
-			String pattern ="dd-M-yyyy";
-					//"E,dd MMM yyyy HH:mm:ss";
+			String pattern = "dd-M-yyyy";
 			SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
 			String Date = dateFormat.format(new Date());
 			return Date;
-					//Date.replace(":", "_").replace(",", "_").replace(" ", "");
+
 		}
 
 
@@ -116,16 +115,16 @@ public class WTestBase implements WebDriverEventListener
 			Properties configProperty = new Properties();
 			File file = new File(Constants.CONFIGPROPERTIES);
 			FileInputStream fileIn = new FileInputStream(file);
-			String reportName= className+"_"+dateFormatter()+".html";
-			htmlReporter= new ExtentHtmlReporter(Constants.EXTENTREPORTS_FILE_PATH+"/" +reportName);
-			extent= new com.aventstack.extentreports.ExtentReports();
+			String reportName = className + "_" + dateFormatter() + ".html";
+			htmlReporter = new ExtentHtmlReporter(Constants.EXTENTREPORTS_FILE_PATH + File.separator + reportName);
+			extent = new com.aventstack.extentreports.ExtentReports();
 			extent.attachReporter(htmlReporter);
-			//set name of report inder config file
+			// set name of report under config file
 			configProperty.load(fileIn);
 			configProperty.setProperty("ExtentReport_FileName", reportName);
 			FileOutputStream fileOut = new FileOutputStream(file);
 			configProperty.store(fileOut, "Written Extent report Name");
-			//extent.createTest(className, "Started class Name test");
+			// extent.createTest(className, "Started class Name test");
 			return extent;
 
 		}
@@ -134,7 +133,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterAlertDismiss(org.openqa.selenium.WebDriver)
@@ -150,7 +149,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterChangeValueOf(org.openqa.selenium.WebElement,
@@ -167,7 +166,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#afterClickOn(
@@ -184,7 +183,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#afterFindBy(org
@@ -195,6 +194,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 			// TODO Auto-generated method stub
 			// Author@AshwiniMore
+			test.log(Status.INFO, "Element Found Successfully " + removeUnwantedPrefix(arg1.toString()));
 
 		}
 
@@ -202,7 +202,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterGetScreenshotAs(org.openqa.selenium.OutputType, java.lang.Object)
@@ -218,7 +218,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#afterGetText(
@@ -229,6 +229,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 			// TODO Auto-generated method stub
 			// Author@AshwiniMore
+			test.log(Status.INFO, "Text has been extracted " + removeUnwantedPrefix(arg1.toString())+" Text is -> "+arg2);
 
 		}
 
@@ -236,7 +237,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterNavigateBack(org.openqa.selenium.WebDriver)
@@ -252,7 +253,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterNavigateForward(org.openqa.selenium.WebDriver)
@@ -268,7 +269,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterNavigateRefresh(org.openqa.selenium.WebDriver)
@@ -284,7 +285,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#afterNavigateTo
@@ -294,6 +295,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 			// TODO Auto-generated method stub
 			// Author@AshwiniMore
+			test.log(Status.INFO, "Navigated Successfully to  "+arg1+" and "+arg0);
 
 		}
 
@@ -301,7 +303,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#afterScript(
@@ -318,7 +320,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * afterSwitchToWindow(java.lang.String, org.openqa.selenium.WebDriver)
@@ -334,7 +336,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeAlertAccept(org.openqa.selenium.WebDriver)
@@ -350,7 +352,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeAlertDismiss(org.openqa.selenium.WebDriver)
@@ -366,7 +368,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeChangeValueOf(org.openqa.selenium.WebElement,
@@ -383,7 +385,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#beforeClickOn(
@@ -400,7 +402,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#beforeFindBy(
@@ -411,6 +413,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 			// TODO Auto-generated method stub
 			// Author@AshwiniMore
+			test.log(Status.INFO, "Trying to find "+removeUnwantedPrefix( arg2.toString() )+" element");
 
 		}
 
@@ -418,7 +421,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeGetScreenshotAs(org.openqa.selenium.OutputType)
@@ -434,7 +437,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#beforeGetText(
@@ -444,6 +447,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 			// TODO Auto-generated method stub
 			// Author@AshwiniMore
+			test.log(Status.INFO, "Trying to find text of Element "+removeUnwantedPrefix(arg0.toString()));
 
 		}
 
@@ -451,7 +455,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeNavigateBack(org.openqa.selenium.WebDriver)
@@ -467,7 +471,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeNavigateForward(org.openqa.selenium.WebDriver)
@@ -483,7 +487,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeNavigateRefresh(org.openqa.selenium.WebDriver)
@@ -499,7 +503,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeNavigateTo(java.lang.String, org.openqa.selenium.WebDriver)
@@ -508,6 +512,7 @@ public class WTestBase implements WebDriverEventListener
 		{
 			// TODO Auto-generated method stub
 			// Author@AshwiniMore
+			test.log(Status.INFO, "Navigating to "+removeUnwantedPrefix(arg1.toString()));
 
 		}
 
@@ -515,7 +520,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#beforeScript(
@@ -532,7 +537,7 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
 	 * beforeSwitchToWindow(java.lang.String, org.openqa.selenium.WebDriver)
@@ -548,33 +553,44 @@ public class WTestBase implements WebDriverEventListener
 
 
 	/*
-	 * (non-Javadoc)
+	 * 
 	 * 
 	 * @see
 	 * org.openqa.selenium.support.events.WebDriverEventListener#onException(
 	 * java.lang.Throwable, org.openqa.selenium.WebDriver)
 	 */
+
+	public String removeUnwantedPrefix(String element)
+		{
+			String returnedString;
+			if(!element.contains("->"))
+				returnedString="";
+			else
+			{
+			int index = element.indexOf("->");
+			returnedString=element.substring(index + 1);
+			}
+			return returnedString;
+		}
+
+
+
+
 	public void onException(Throwable arg0, WebDriver arg1)
 		{
-			String exception = arg0.getMessage().toString().toLowerCase();
-			if(exception.contains("timeout"))
-			{
-				if(exception.contains("Caused by:"))
-
-					System.out.println("****************Element not found");
-			}
+			/*
+			 * String exception = arg0.getMessage().toString().toLowerCase();
+			 * System.out.println("*********"+exception+"******************");
+			 * if(exception.contains("invalid_selector_exception")); {
+			 * test.log(Status.FAIL, exception); }
+			 */
+			test.log(Status.FAIL, "***TEST FAILED WITH EXCEPTION *****"+"\n"+arg0.getMessage().toString().toLowerCase());
 
 		}
 
 
 
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.openqa.selenium.support.events.WebDriverEventListener#
-	 * afterAlertAccept(org.openqa.selenium.WebDriver)
-	 */
 	public void afterAlertAccept(WebDriver arg0)
 		{
 			// TODO Auto-generated method stub
