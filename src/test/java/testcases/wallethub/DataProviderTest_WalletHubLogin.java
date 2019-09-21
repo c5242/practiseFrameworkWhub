@@ -13,11 +13,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import pageobjects.wallethub.LoginPage;
+import pageobjects.wallethub.WalletHubHomePage;
+import pageobjects.wallethub.WalletHubProfilePage;
 import util.Dataprovider;
 import util.WTestBase;
-import walletHubPageObjects.LoginPage;
-import walletHubPageObjects.WalletHubHomePage;
-import walletHubPageObjects.WalletHubProfilePage;
 
 public class DataProviderTest_WalletHubLogin extends WTestBase{
 

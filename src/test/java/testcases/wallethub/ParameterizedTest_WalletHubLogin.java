@@ -12,10 +12,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import pageobjects.wallethub.LoginPage;
+import pageobjects.wallethub.WalletHubHomePage;
+import pageobjects.wallethub.WalletHubProfilePage;
 import util.WTestBase;
-import walletHubPageObjects.LoginPage;
-import walletHubPageObjects.WalletHubHomePage;
-import walletHubPageObjects.WalletHubProfilePage;
 
 public class ParameterizedTest_WalletHubLogin extends WTestBase{
 
