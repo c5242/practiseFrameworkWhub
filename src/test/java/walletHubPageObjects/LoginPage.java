@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import facebookPagePbjects.FaceBookHomePage;
+import pageobjects.facebook.FaceBookHomePage;
 import util.CommonMethods;
 
 public class LoginPage extends CommonMethods
