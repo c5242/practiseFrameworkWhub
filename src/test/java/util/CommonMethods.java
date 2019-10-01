@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.Status;
+
 public class CommonMethods extends WTestBase
 	{
 
@@ -58,7 +60,11 @@ public class CommonMethods extends WTestBase
 						element.click();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Assert.fail("ELement not clickable: " + element);
+						try {
+							Assert.fail("ELement not clickable: " + element);
+						} catch (AssertionError e1) {
+							test.log(Status.FAIL, "Element Not clikable");
+						}
 						e.printStackTrace();
 					}
 

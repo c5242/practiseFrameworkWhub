@@ -1,6 +1,7 @@
 package pageobjects.wallethub;
 
 import java.io.FileNotFoundException;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +44,7 @@ public class LoginPage extends CommonMethods
 	@FindBy(xpath = "//div[@id='userNav']/ul/li/a/span")
 	public WebElement nameLogo;
 
-	@FindBy(xpath = "//span[contains(text(),'Logn')]")
+	@FindBy(xpath = "//span[contains(text(),'Login')]")
 	public WebElement loginB;
 
 	@FindBy(xpath = "//input[@placeholder='Email Address']")

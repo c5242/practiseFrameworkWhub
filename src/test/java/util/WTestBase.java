@@ -30,7 +30,7 @@ public class WTestBase implements WebDriverEventListener
 	public WebDriver e_driver = null;
 	public EventFiringWebDriver driver = null;
 	public WTestBase base = null;
-	public Properties prop = null;
+	public Properties prop ;
 	public static com.aventstack.extentreports.ExtentTest test;
 	public static com.aventstack.extentreports.ExtentReports extent;
 	public static ExtentHtmlReporter htmlReporter;
@@ -53,7 +53,6 @@ public class WTestBase implements WebDriverEventListener
 			} catch (IOException e)
 			{
 				// TODO Auto-generated catch block
-
 				System.out.println("File not present at path");
 				e.printStackTrace();
 			}

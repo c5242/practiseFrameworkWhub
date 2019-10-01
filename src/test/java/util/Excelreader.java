@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 public class Excelreader
 {
 
-String path="F://seleniumdatareader//Book1.xlsx";
+String path="C:\\Users\\TGT227\\git\\practiseFrameworkWhub\\Book1.xlsx";
 
 //@Test(dataProvider="getdata1")
 public void testdata(Map<String,String> listofMap)

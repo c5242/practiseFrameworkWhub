@@ -1,69 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2060" started-at="2019-09-02T19:23:18Z" finished-at="2019-09-02T19:23:20Z">
+  <suite name="Default suite" duration-ms="19190" started-at="2019-10-01T09:54:13Z" finished-at="2019-10-01T09:54:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2060" started-at="2019-09-02T19:23:18Z" finished-at="2019-09-02T19:23:20Z">
-      <class name="testcases.amazon.AmzaonFiltersUsingDataDriven">
-        <test-method status="PASS" signature="Bclass()[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bclass" is-config="true" duration-ms="732" started-at="2019-09-03T00:53:18Z" finished-at="2019-09-03T00:53:19Z">
+    <test name="Default test" duration-ms="19190" started-at="2019-10-01T09:54:13Z" finished-at="2019-10-01T09:54:32Z">
+      <class name="testcases.maps.testCase">
+        <test-method status="PASS" signature="configuration()[pri:0, instance:testcases.maps.testCase@1bce4f0a]" name="configuration" is-config="true" duration-ms="191" started-at="2019-10-01T15:24:13Z" finished-at="2019-10-01T15:24:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Bclass -->
-        <test-method status="PASS" signature="Bmethod(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bmethod" is-config="true" duration-ms="36" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="testbefore(java.lang.reflect.Method)[pri:0, instance:testcases.maps.testCase@1bce4f0a]" name="testbefore" is-config="true" duration-ms="4" started-at="2019-10-01T15:24:13Z" finished-at="2019-10-01T15:24:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test(java.lang.reflect.Method) throws java.lang.Exception]]>
+                <![CDATA[public void testcases.maps.testCase.mapTest() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Bmethod -->
-        <test-method status="PASS" signature="test(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="test" duration-ms="60" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
+        </test-method> <!-- testbefore -->
+        <test-method status="PASS" signature="mapTest()[pri:0, instance:testcases.maps.testCase@1bce4f0a]" name="mapTest" duration-ms="7646" started-at="2019-10-01T15:24:13Z" finished-at="2019-10-01T15:24:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mapTest -->
+        <test-method status="PASS" signature="ScreenShot(org.testng.ITestResult)[pri:0, instance:testcases.maps.testCase@1bce4f0a]" name="ScreenShot" is-config="true" duration-ms="0" started-at="2019-10-01T15:24:21Z" finished-at="2019-10-01T15:24:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test(java.lang.reflect.Method) throws java.lang.Exception]]>
+                <![CDATA[[TestResult name=mapTest status=SUCCESS method=testCase.mapTest()[pri:0, instance:testcases.maps.testCase@1bce4f0a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="Bmethod(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bmethod" is-config="true" duration-ms="2" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test1() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- ScreenShot -->
+        <test-method status="PASS" signature="driverClean()[pri:0, instance:testcases.maps.testCase@1bce4f0a]" name="driverClean" is-config="true" duration-ms="11327" started-at="2019-10-01T15:24:21Z" finished-at="2019-10-01T15:24:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Bmethod -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="test1" duration-ms="13" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="Bmethod(java.lang.reflect.Method)[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="Bmethod" is-config="true" duration-ms="1" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testcases.amazon.AmzaonFiltersUsingDataDriven.test2() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bmethod -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:testcases.amazon.AmzaonFiltersUsingDataDriven@5e5792a0]" name="test2" duration-ms="1106" started-at="2019-09-03T00:53:19Z" finished-at="2019-09-03T00:53:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- testcases.amazon.AmzaonFiltersUsingDataDriven -->
+        </test-method> <!-- driverClean -->
+      </class> <!-- testcases.maps.testCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
